@@ -1,0 +1,15 @@
+## Deny access
+
+<FilesMatch "\.?htaccess$>
+    deny from all
+</FilesMatch>
+
+## Redirect User
+Redirect 301 /load.php /
+Redirect 301 /templates/header.php /
+Redirect 301 /templates/footer.php /
+
+
+Redirect 301 /Fanshawe-IDP-Inclass/movies_cms/load.php /Fanshawe-IDP-Inclass/movies_cms/
+Redirect 301 /Fanshawe-IDP-Inclass/movies_cms/templates/header.php /Fanshawe-IDP-Inclass/movies_cms/
+Redirect 301 /Fanshawe-IDP-Inclass/movies_cms/templates/footer.php /Fanshawe-IDP-Inclass/movies_cms/
