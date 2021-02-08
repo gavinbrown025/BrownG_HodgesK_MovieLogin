@@ -1,7 +1,6 @@
 <?php
     require_once '../load.php';
     $ip = $_SERVER['REMOTE_ADDR'];
-    //$last_login = now();
 
     if(isset($_SESSION['user_id'])){
         redirect_to('index.php');
@@ -53,11 +52,5 @@
 			</form>
 		</section>
 	</main>
-    <!-- <form action="admin_login.php" method="post">
-        <input id="username" type="text" name="username" placeholder="Login" value="">
-        <input id="password" type="password" name="password" placeholder="Password" value="">
-        <button name="submit" type="submit">Login</button>
-        <a @click.prevent="submitLogin" href="#" class="button">CONTINUE</a>
-    </form> -->
 </body>
 </html>
