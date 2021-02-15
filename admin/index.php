@@ -30,6 +30,7 @@ confirm_logged_in();
                 <p>Total Logins: <?php echo $_SESSION['user_logins'];?></p>
             </div>
 
+            <a class="button" href="admin_createuser.php">Sign Up</a>
             <a class="button" href="admin_logout.php">Log Out</a>
 
         </section>

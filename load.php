@@ -10,3 +10,4 @@
     require_once ABSPATH.'/admin/scripts/read.php';
     require_once ABSPATH.'/admin/scripts/login.php';
     require_once ABSPATH.'/admin/scripts/functions.php';
+    require_once ABSPATH.'/admin/scripts/user.php';

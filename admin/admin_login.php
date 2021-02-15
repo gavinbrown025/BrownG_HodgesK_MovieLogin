@@ -42,13 +42,15 @@
 			</div>
 		</header>
 		<section id="login-con">
-            <form action="admin_login.php" method="post" id="login-form">
+            <form class="user-form" action="admin_login.php" method="post">
                 <h2>Log in with your Username</h2>
 				<input id="username" type="text" name="username" placeholder="Login" value="">
                 <input id="password" type="password" name="password" placeholder="Password" value="">
                 <?php echo !empty($message)?$message:''; ?>
                 <button class="button" name="submit" type="submit">CONTINUE</button>
-				<P>New to ROKU? <span @click="showSignUp"> Sign Up</span></P>
+				<P>New to ROKU? 
+                    <a @click="showSignUp" href="admin_createuser.php"> Sign Up</a>
+                </P>
 			</form>
 		</section>
 	</main>
