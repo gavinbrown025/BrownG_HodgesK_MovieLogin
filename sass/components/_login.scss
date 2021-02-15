@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-#login-form {
+.user-form {
     display: flex;
     flex-direction: column;
     min-width: 325px;
@@ -26,7 +26,9 @@
         margin:.5rem 0;
         padding: 1rem .5rem;
     }
+    button{ cursor: pointer;}
+
 
     p{font-size: 1.2rem;}
-    span{font-weight: 700; cursor: pointer;}
+    a{color: #fff; font-weight: 700;}
 }
