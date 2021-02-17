@@ -24,6 +24,15 @@ function createUser($user_data)
     //! new message to welcome new user?
 
     if($create_user_result){
+        $email_to = $user_data['email'];
+        $email_subject = "Welcome " . $user_data['fname'];
+        $email_message = "Your new username and password are " . $user_data['username'] . " ". $user_data['password'];
+        $email_headers = array(
+            'From'=>'gavinbro97@live.ca',
+            'Reply-To' => 'gavinbro97@live.ca'
+        );
+        mail($email_to, $email_subject, $email_message, $email_headers);
+
         redirect_to('index.php');
     } else {
         return 'invalid';

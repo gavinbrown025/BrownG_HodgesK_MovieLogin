@@ -18,7 +18,8 @@
              $data['password'] = password_hash($_POST['rand_pass'], PASSWORD_DEFAULT);
          }
 
-    $message = createUser($data);
+         $message = createUser($data);
+
     }
 
 ?>
