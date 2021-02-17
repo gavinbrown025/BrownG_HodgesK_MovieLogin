@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 08, 2021 at 11:34 PM
+-- Generation Time: Feb 17, 2021 at 04:58 AM
 -- Server version: 5.7.31
--- PHP Version: 7.3.21
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -1063,20 +1063,22 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `user_email` varchar(250) NOT NULL,
   `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
-  `user_logins` int(11) NOT NULL,
-  `failed_login` int(11) NOT NULL,
-  `locked` int(11) NOT NULL,
+  `user_logins` int(11) DEFAULT '0',
+  `failed_login` int(11) DEFAULT '0',
+  `locked` int(11) DEFAULT '0',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_logins`, `failed_login`, `locked`) VALUES
-(1, 'Gavin', 'admin', 'admin123', 'Gbrown@fanshawe.ca', '2021-02-08 23:27:59', '::1', 2, 0, 0),
-(2, 'Gavin', 'gavinbro', 'gavin123', 'gavin@blank.com', '2021-02-08 23:30:28', '::1', 1, 0, 0),
-(7, 'Katie', 'katiehod', 'katie123', 'katie@fanshawe.com', '2021-02-08 22:50:16', 'no', 0, 0, 0);
+(33, 'Gavin', 'hats', '$2y$10$ydc4nImS4EuORe.duGG57OquY.ZL0n9dIW.2VXbQ0DqJV33ysGecu', 'gavinbrown025@gmail.com', '2021-02-17 04:49:18', '127.0.0.1', 1, 0, 0),
+(34, 'bruh', 'bruh', '$2y$10$SwBFXhKVvYPc2qYgvoxiIOQtXjslDqymYEIHsPdj5aLcWl3yrA9LG', 'gavinbro97@live.ca', '2021-02-17 04:46:39', '127.0.0.1', 3, 0, 0),
+(35, 'fat', 'fat', '$2y$10$dytoBM1b3/iKhD2qWiacPu2sONx44.Hsq1ID4AJXP/dPbf2FGU5mu', 'gavinbro97@live.ca', '2021-02-17 04:49:24', '127.0.0.1', 1, 0, 0),
+(36, 'wer', 'wer', '$2y$10$WhvfyYoYcs1q15dtnoBdmumdOYOhzgEuJ9U68rx7V34ZnyYjlOzNK', 'gavinbro97@live.ca', '2021-02-17 04:49:46', '127.0.0.1', 8, 0, 0),
+(37, 'g', 'g', '$2y$10$vI.k3AQ79WVVZ7JO..2mSu7D9Ze4Z5irFoA5aUy1LN0t11DAZRJJS', 'gavinbro97@live.ca', '2021-02-17 04:48:55', '127.0.0.1', 2, 0, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

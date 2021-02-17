@@ -9,6 +9,11 @@ https://www.youtube.com/watch?v=WjIie4fcxTM
 
 Katie
 
-https://stackoverflow.com/questions/37120328/how-to-limit-the-number-of-login-attempts-in-a-login-script/37120660
+https://stackoverflow.com/questions/18379238/send-email-with-php-from-html-form-on-submit-with-the-same-script
 
-https://www.reddit.com/r/PHPhelp/comments/7nwvh7/lock_out_user_after_failed_attempts/
+https://phppot.com/php/php-contact-form/
+
+https://www.php.net/manual/en/function.mail.php
+
+https://magemastery.net/courses/user-registration-with-php-mysql/form-validation
+

@@ -12,13 +12,12 @@
             'email' => trim($_POST['email'])
         );
 
-         if(empty($_POST['rand_pass'])){
-             $data['password'] = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
-         } else {
-             $data['password'] = password_hash($_POST['rand_pass'], PASSWORD_DEFAULT);
-         }
 
-    $message = createUser($data);
+        $data['password'] = password_hash($_POST['rand_pass'], PASSWORD_DEFAULT);
+
+
+        $message = createUser($data);
+        
     }
 
 ?>
@@ -50,23 +49,20 @@
             <form class="user-form" action="admin_createuser.php" method="post">
                 <h2>Fill in to create an account</h2>
 
-                <input id="firstname" type="text" name="fname" placeholder="first name" value="">
-                <input id="username" type="text" name="username" placeholder="username" value="">
-
-               <input id="password" type="password" name="password" placeholder="password" 
-                value="">
+                <input id="firstname" type="text" name="fname" placeholder="first name" value="" required>
+                <input id="username" type="text" name="username" placeholder="username" value="" required>
 
                 <div class="pass-gen">
-                    <input id="rand_pass" type="checkbox" name="rand_pass" value="<?php echo $rand_pass;?>">
+                    <input id="rand_pass" type="checkbox" name="rand_pass" value="<?php echo $rand_pass;?>" required>
                     <label for="rand_pass">Generate Random Password?</label>
                 </div>
 
-                <input id="email" type="email" name="email" placeholder="email" >
+                <input id="email" type="email" name="email" placeholder="email" required >
                 <?php echo !empty($message)?$message:''; ?>
 
                 <button class="button" type="submit" name="submit">CONTINUE</button>
-                <p>Already have an account?
-                    <a href="admin_login.php"> Login</a>
+                <p>
+                    <a href="admin_login.php">Return to admin panel</a>
                 </p>
             </form>
         </section>

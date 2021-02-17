@@ -48,9 +48,9 @@
                 <input id="password" type="password" name="password" placeholder="Password" value="">
                 <?php echo !empty($message)?$message:''; ?>
                 <button class="button" name="submit" type="submit">CONTINUE</button>
-				<P>New to ROKU? 
+				<!-- <P>New to ROKU? 
                     <a @click="showSignUp" href="admin_createuser.php"> Sign Up</a>
-                </P>
+                </P> -->
 			</form>
 		</section>
 	</main>
